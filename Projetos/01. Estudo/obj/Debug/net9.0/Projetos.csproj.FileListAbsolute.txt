@@ -1,0 +1,14 @@
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\bin\Debug\net9.0\Projetos.exe
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\bin\Debug\net9.0\Projetos.deps.json
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\bin\Debug\net9.0\Projetos.runtimeconfig.json
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\bin\Debug\net9.0\Projetos.dll
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\bin\Debug\net9.0\Projetos.pdb
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.AssemblyInfoInputs.cache
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.AssemblyInfo.cs
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.csproj.CoreCompileInputs.cache
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.dll
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\refint\Projetos.dll
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.pdb
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\Projetos.genruntimeconfig.cache
+C:\Users\Patricia.4841\Documents\Estudos\Curso .net\Projetos\obj\Debug\net9.0\ref\Projetos.dll

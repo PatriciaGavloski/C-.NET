@@ -1,0 +1,658 @@
+------------------- Anotações ------------------------
+C#
+
+COMENTÁRIOS:
+CTRL + K + C
+CTRL + K + U
+/* */
+
+
+É recomendado fazer essas ações para começar um projeto
+
+* dotnet restore → adiconar os pacotes padrões 
+* dotnet build → compilador
+* dotnet cleab → limpa todos os caches 
+* dotnet run → executa a aplicação 
+
+
+------------
+
+Depurando 
+bug ou debug
+
+relise onde vai soltar a aplicação 
+teminal 
+
+executar a aplicação em apuração 
+bug defeito 
+
+
+breakpoint ou ponto de pausa
+identação do código 
+
+----------------------------------
+
+Definições do escopo do problema 
+
+- Importações 
+- Namespace
+- Classes 
+- Método Principal 
+
+
+Namespaces
+
+Divições são divisões Lógicas
+
+acompanham o nome da pasta 
+um namespace por arquivo 
+boas praticas de escrita de codigo 
+não pode ter o mesmo namespace e nem a mesma classe 
+
+Using 
+importações 
+quais as bibliotecas que os programas irão utilizar 
+Por padrão só o básico vem incluso 
+usar no começo do arquivo 
+
+organizar o nosso código em pastas e namespaces é fundamental 
+
+Variáveis 
+
+é algo que utilizamos par armazenar uma informação 
+esse valor varia 
+ele pode ser alterado a qualquer momento 
+instaniar 
+
+tipado 
+tipo de dados 
+o tipo vem antes do nome da variavel 
+
+int idade = 25;
+ 
+Padronização de Nomes 
+utilize nomes coesos
+não utilize caracteres especiais ou espaços
+não começa com número 
+a primeira letra é minuscula 
+
+constante 
+não podem ser alteradas
+regras 
+validações 
+
+-----------------------------------
+
+Tipos Primitivos 
+
+Built-in types
+
+otimiza o programa 
+tipos de valor 
+amarzenam valores 
+
+tipos simples 
+Enumerados 
+Estruturas (Structs)
+Tipos Nulos 
+
+* Cada tipo primitivos possui uma capacidade 
+* Caso esta capacidade exxceda, o programa gera um erro 
+* Esta capacidade pré-definida ajuda na otimização do seu programa
+
+
+--------------------------------
+
+
+Null 
+Void vazio → sem retorno 
+void é retorno vazio
+null string vazio 
+
+
+------------------
+
+Parse e o convert
+
+converte um tipo para outro 
+no caso do parse 
+tipo primitivo
+
+eles tem uma extensão .parse
+
+tenta converter um tipo para um inteiro 
+parse 
+
+ele sempre espera uma string 
+converter uma cadeia de caracteres 
+string para um nuemro 
+daria um erro em tempo de execução 
+depuração 
+try parse 
+tratar erro 
+podemos usar um tipo primitivo 
+para tentar converter para esse valor 
+qualquer tipo de incompatibilidade 
+
+
+ao contrario do parse 
+
+o convert é uma classe um objeto 
+similar ao parse 
+não apenas string
+devemos informar o tipoo na chada da conversão 
+
+utilizar o convert para tentar converter de um tipo para outro
+
+
+
+-----------------------------
+
+Operadores Aritiméticos
+
+
+Definições 
+Soma +
+Subtração -
+Multiplicação *
+Divisão /
+
+---------
+
+Operadores de atribuição
+
++=
+-=
+*=
+/=
+
+---------------
+
+Operadores de comparação 
+
+Igual ==
+Diferente !=
+Maior que >
+Menor que <
+Maior ou igual >=
+Menor ou igual <=
+
+
+--------------
+
+
+Operadores Lógicos 
+
+Usado para operações condicionais 
+Retorna sempre verdadeiro ou falso 
+
+E → AND
+TODAS as condições devem ser VERDADEIRAS
+&&
+
+OU → OR
+Se pelo menos UMA condição é VERDADEIRA
+|| 
+
+NEGAÇÃO → NOT
+!
+
+
+-----------------
+
+Switch
+
+- Utilizado quando temos muitas decisões (condições)
+- Executado em cascata 
+- Devemos parar a execução manualmente usando o BREAK
+- Possui uma execução chamada DEFAULT 
+
+
+
+
+--------------------
+
+Laços de Repetição 
+
+FOR
+
+- Tradução "Para", ou seja, para cada item em um valor...
+- Executa uma determinada ação várias vezes 
+- Definido pela palavra for
+- Exige 3 paâmetros
+ - Contador
+ - Condição 
+ - Incremento
+
+- for (var i = 0; i <= 5; i++)
+vai contar de zero até cinco smepre contando um para i 
+
+vai sair 
+
+0
+1
+2
+3
+4
+5
+
+-----------------------------
+
+While 
+
+enquanto uma condição for verdadeira 
+exige apenas uma condição
+
+            int valorum = 0;
+            
+            while(valorum <= 5)
+            {
+            Console.WriteLine(valorum);
+            valorum++;
+            }
+
+
+---------------------
+
+Do
+
+realiza em ação enquanto 
+do/while
+
+
+
+var valordois = 0;
+do 
+{
+	Console.WriteLine("Teste");
+	valordois ++;
+} while (valor < 5);
+
+
+--------------
+
+Funções ou Métodos 
+
+Podemos segmentar nosso programa em funções 
+Também conhecidos como métodos
+o main é um exemplo 
+Possui um retorno, um nome e parâmetros 
+Esta composição é camada de assinatura 
+Começam sempre com maiúscula 
+
+
+
+static void Main(string[] args)
+{
+	MeuMetodo("C# é legal!");
+}
+static void MeuMetodo(string parametro)
+{
+	Console.WriteLine(parametro);
+}
+
+
+Não pode ter método dentro de método 
+
+-----------------
+
+Tipos de referencias e tipos de valores 
+
+- A memória é dividida em duas partes, Heap e Stack
+- Heap armazena os dados 
+- Stack armazena as referências para os dados 
+
+- Qualquer tipo no .NET é tratado como:
+	- Tipo de Referência (Reference Type)
+	- Tipo de Valor (Value Type)
+- Tipos de valor armazenados em um local da memória chamada Stack
+
+- Quando armazenamos um valor, a memória é alocada 
+- Este espaço armazena o dado criado 
+- Nossa variável acessa este dado diretamente
+- Se assimilarmos uma variável do tipo de valor a outra
+		-O valor será COPIADO
+		- Ambas serão independents
+- Built- in, Structs, Enums
+- Garbage Collector não acessa o Stack
+
+
+ Reference Types
+
+- Armazenam o endereço do objeto que contém os dados 
+- Não armazena os dados em si 
+- São armazenados em um local da memória chamado de Heap 
+- Ao assimilar uma variável 
+	- Criará uma referência 
+	- Aponta para a mesma informação 
+	- Não são independentes 
+- Quando não mais utilizados são marcados para exclusão 
+- Garbage Collector passa removendo todos eles
+- Classes, Objects, Arrays 
+
+
+------------------
+
+Structs
+
+- Tipos de dado estruturado 
+- Apenas a estrutura, o esqueleto 
+- Tipo de valor 
+- Armazenam apenas outros tipos de dados
+- Definido pela palavra struct
+- Composto de propriedades e métodos 
+- Nome sempre com maiúsculo
+	- o mesmo para prorpiedade e métodos
+- criado a partir da palavra new
+	- Neste momento sim temos os valores
+
+a anatomia de uma estrutura normalmente é 
+
+struct Product
+{ 
+	//Propriedade
+
+	//Métodos
+}
+
+struct Product 
+{
+	// Propriedades 
+	public int Id;
+
+	// Métodos
+}
+
+
+Anatomia de um método
+
+struct Product
+{
+	public int id;
+	public float Price;
+
+	public floar PriceInDolar (float dolar)
+	{
+		return Price * dolar;
+	}
+}
+
+static void Main(string[] args)
+{
+	//cria uma estrutura 
+	var product = new Product();
+}
+
+var product = new Product();
+product.Id = 1;
+product.Title = "Mouse gamer";
+product.Price =197.23f;
+Console.WritLine(product.Id);
+Console.WriteLine(product.Title);
+Console.WiriteLine(product.Price);
+
+Método construtor é um método com mesmo nome da struct 
+
+struct Product
+{ 	
+	public Producr (int id, string title, float price)
+	{
+		Id = id;
+		Title = title;
+		Price = price;
+	}
+}
+
+
+----------------------------
+
+Enumeradores
+
+
+
+- Usando para fornecer uma melhor visualização do código 
+- Substituem o uso de inteiros 
+- Usados em listas curtas
+- Usadis en dados fixos
+	-Hard Coded
+- Sempre em maiúsculo
+	- Começar com a letra E
+
+
+Enums 
+- Anatomia de um enumerador
+
+enum EEstadoCivil
+{
+	// Enumeradores
+}
+
+enum EEstadoCivil
+{
+	Solteiro = 1,
+	Casado = 2,
+	Divorciado = 3
+}
+
+
+
+struct Cliente 
+{
+	public string Nome;
+	public EEstadoCivil EstadoCivil;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
